@@ -1,0 +1,6 @@
+import gtts
+from playsound import playsound
+x = input("Enter")
+tts = gtts.gTTS(x, lang='hi')
+tts.save("hello.mp3")
+playsound("hello.mp3")
