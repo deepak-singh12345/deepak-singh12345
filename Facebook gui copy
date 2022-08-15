@@ -1,0 +1,695 @@
+from tkinter import *
+import cv2
+# from tkinter.font import Font
+from PIL import ImageTk, Image
+
+fb = Tk()
+fb.title("Facebook")
+fb.geometry("1300x820")
+fb.configure(bg='#3b5998')
+
+frame1 = LabelFrame(fb, height=750, bg='white', width=1200, bd=0)
+frame1.place(x=50, y=25)
+
+ser1 = (Image.open("searchbar.png"))
+ser2 = ser1.resize((300, 200), Image.ANTIALIAS)
+ser3 = ImageTk.PhotoImage(ser2)
+
+search_bar = Label(image=ser3, bd=0)
+search_bar.place(x=60, y=45)
+
+img6 = (Image.open("OIP.jpg"))
+lg0 = img6.resize((50, 50), Image.ANTIALIAS)
+lg6 = ImageTk.PhotoImage(lg0)
+
+img_lbl = Label(image=lg6, bd=0)
+img_lbl.place(x=68, y=38)
+
+name_lbl = Label(text="facebook", bg="white", fg='#3b5998')
+name_lbl.config(font=("Arial", 20))
+name_lbl.place(x=120, y=46)
+
+feed = (Image.open("feed_logo.png"))
+feed1 = feed.resize((30, 25), Image.ANTIALIAS)
+feed2 = ImageTk.PhotoImage(feed1)
+
+feed_lbl = Label(image=feed2, bd=0)
+feed_lbl.place(x=85, y=170)
+
+feed_txt = Label(text="News Feed", bg='white', fg='#3b5998', font=4)
+feed_txt.place(x=130, y=170)
+
+def give_input():
+    pass
+
+def chat_bot1():
+    top = Toplevel()
+    top.geometry("500x500")
+    top.config(bg="white")
+    top.title("Messages")
+    entry_msg = Entry(top,width=80)
+    entry_msg.place(x=10,y=450)
+    btn2 = Button(top, text="close", command=give_input).pack()
+
+
+messenger1 = (Image.open("messenger.png"))
+messenger2 = messenger1.resize((35, 35), Image.ANTIALIAS)
+messenger = ImageTk.PhotoImage(messenger2)
+
+messenger_lbl = Button(image=messenger, bd=0, bg='white',command=chat_bot1)
+messenger_lbl.place(x=76, y=210)
+
+feed_txt = Label(text="Messenger", bd=0, bg='white', fg='#4A4A4A')
+feed_txt.config(font=('Arial', 14))
+feed_txt.place(x=133, y=215)
+
+watch1 = (Image.open("watch.png"))
+watch2 = watch1.resize((30, 30), Image.ANTIALIAS)
+watch3 = ImageTk.PhotoImage(watch2)
+
+watch_lbl = Label(image=watch3, bd=0)
+watch_lbl.place(x=82, y=260)
+
+watch_txt = Label(text="Watch", bd=0, bg='white', fg='#4A4A4A')
+watch_txt.config(font=("Arial", 14))
+watch_txt.place(x=133, y=260)
+
+pages1 = (Image.open("pages.png"))
+pages2 = pages1.resize((30, 30), Image.ANTIALIAS)
+pages3 = ImageTk.PhotoImage(pages2)
+
+pages_lbl = Label(image=pages3, bd=0)
+pages_lbl.place(x=80, y=310)
+
+pages_txt = Label(text="Pages", bd=0, bg='white', fg="#4A4A4A")
+pages_txt.config(font=('Arial', 14))
+pages_txt.place(x=133, y=308)
+
+games1 = (Image.open("Games.png"))
+games2 = games1.resize((30, 30), Image.ANTIALIAS)
+games3 = ImageTk.PhotoImage(games2)
+
+games_label = Label(image=games3, bd=0)
+games_label.place(x=80, y=355)
+
+games_txt = Label(text="Games", bd=0, bg='white', fg='#4A4A4A')
+games_txt.config(font=('Arial', 14))
+games_txt.place(x=133, y=355)
+
+explore1 = (Image.open("explore.png"))
+explore2 = explore1.resize((35, 30), Image.ANTIALIAS)
+explore3 = ImageTk.PhotoImage(explore2)
+
+explore_lbl = Label(image=explore3, bd=0)
+explore_lbl.place(x=78, y=400)
+
+explore_txt = Label(text="Explore", bd=0, bg="white", fg='#4A4A4A')
+explore_txt.config(font=('Arial', 14))
+explore_txt.place(x=133, y=400)
+
+event1 = (Image.open("events.png"))
+event2 = event1.resize((30, 25), Image.ANTIALIAS)
+event3 = ImageTk.PhotoImage(event2)
+
+event_lbl = Label(image=event3, bd=0)
+event_lbl.place(x=82, y=450)
+
+event_txt = Label(text="Events", bd=0, bg='white', fg="#4A4A4A")
+event_txt.config(font=("Arial", 14))
+event_txt.place(x=133, y=450)
+
+group1 = (Image.open("groups.jpg"))
+group2 = group1.resize((30, 35), Image.ANTIALIAS)
+group3 = ImageTk.PhotoImage(group2)
+
+group_lbl = Label(image=group3, bd=0)
+group_lbl.place(x=80, y=490)
+
+group_txt = Label(text="Groups", bd=0, bg='white', fg='#4A4A4A')
+group_txt.config(font=("Aria", 14))
+group_txt.place(x=133, y=490)
+
+collect = (Image.open("collections.png"))
+collect1 = collect.resize((40, 35), Image.ANTIALIAS)
+collect2 = ImageTk.PhotoImage(collect1)
+
+collect_lbl = Label(image=collect2, bd=0)
+collect_lbl.place(x=75, y=537)
+
+collect_txt = Label(text="Collection", bg='white', fg='#4A4A4A', bd=0)
+collect_txt.config(font=("Arial", 14))
+collect_txt.place(x=133, y=537)
+
+notification = Label(text="Notifications", bd=0, bg='white')
+notification.config(font=("Arial", 14))
+notification.place(x=100, y=650)
+
+bell = (Image.open("notify2.png"))
+bell1 = bell.resize((20, 20), Image.ANTIALIAS)
+bell2 = ImageTk.PhotoImage(bell1)
+
+bell_lbl = Label(image=bell2, bd=0)
+bell_lbl.place(x=75, y=650)
+
+notify = (Image.open("notify.png"))
+notify1 = notify.resize((270, 80), Image.ANTIALIAS)
+notify2 = ImageTk.PhotoImage(notify1)
+
+notify_lbl = Label(image=notify2, bd=0)
+notify_lbl.place(x=65, y=680)
+
+cross = (Image.open("cross.png"))
+cross1 = cross.resize((33, 33), Image.ANTIALIAS)
+cross2 = ImageTk.PhotoImage(cross1)
+
+cross_lbl = Label(image=cross2, bd=0)
+cross_lbl.place(x=300, y=650)
+
+txt = """No friend request"""
+txt2 = "No one want to be your friend"
+
+notify_msg = Label(text=txt, bd=0, bg="#3b5998", fg="white")
+notify_msg.config(font=("Arial", 12))
+notify_msg.place(x=90, y=700)
+
+notify_msg1 = Label(text=txt2, bd=0, bg="#3b5998", fg="white")
+notify_msg1.config(font=("Arial", 12))
+notify_msg1.place(x=90, y=720)
+
+frame2 = LabelFrame(fb, height=750, width=600, bd=0)
+frame2.place(x=350, y=25)
+
+template1 = (Image.open("template1.png"))
+template2 = template1.resize((580, 100), Image.ANTIALIAS)
+template3 = ImageTk.PhotoImage(template2)
+
+template_lbl = Label(frame2, image=template3)
+template_lbl.place(x=5, y=10)
+
+que = Label(frame2, text="What's on your mind? Deepak", bg='white', fg="black", bd=0)
+que.config(font=("Arial", 12))
+que.place(x=50, y=35)
+
+min_temp1 = (Image.open("mini_temp.png"))
+min_temp2 = min_temp1.resize((80, 30), Image.ANTIALIAS)
+min_temp3 = ImageTk.PhotoImage(min_temp2)
+
+min_temp = Label(frame2, image=min_temp3, bd=0)
+min_temp.place(x=470, y=30)
+
+def open_cam():
+    cap = cv2.VideoCapture(0)
+
+    if not cap.isOpened():
+        raise IOError("Cannot open webcam")
+
+    while True:
+        ret, frame = cap.read()
+        frame = cv2.resize(frame, None, fx=1.5, fy=1.5, interpolation=cv2.INTER_AREA)
+        cv2.imshow('Input', frame)
+
+        c = cv2.waitKey(1)
+        if c == "X":
+            break
+
+    cap.release()
+    cv2.destroyAllWindows()
+
+def open_cam1():
+    cap = cv2.VideoCapture(0)
+
+    if not cap.isOpened():
+        raise IOError("Cannot open webcam")
+
+    while True:
+        ret, frame = cap.read()
+        frame = cv2.resize(frame, None, fx=1.5, fy=1.5, interpolation=cv2.INTER_AREA)
+        cv2.imshow('Input', frame)
+
+        c = cv2.waitKey(1)
+        if c == 27:
+            break
+
+    cap.release()
+    cv2.destroyAllWindows()
+
+
+
+cam_temp = (Image.open("camera_template.png"))
+cam_temp1 = cam_temp.resize((90, 30), Image.ANTIALIAS)
+cam_temp2 = ImageTk.PhotoImage(cam_temp1)
+
+cam_temp_lbl = Button(frame2, image=cam_temp2, bd=0,bg='white',command=open_cam1)
+cam_temp_lbl.place(x=130, y=65)
+
+live_temp = (Image.open("live_template.png"))
+live_temp1 = live_temp.resize((90, 30), Image.ANTIALIAS)
+live_temp2 = ImageTk.PhotoImage(live_temp1)
+
+live_lbl = Button(frame2, image=live_temp2, bd=0,bg='white',command=open_cam)
+live_lbl.place(x=50, y=65)
+
+stories = Label(frame2, text="Stories")
+stories.config(font=("Arial", 14))
+stories.place(x=30, y=100)
+
+template_big = (Image.open("template2.png"))
+template_big1 = template_big.resize((600, 470), Image.ANTIALIAS)
+template_fin = ImageTk.PhotoImage(template_big1)
+
+temp_lbl = Label(frame2, image=template_fin)
+temp_lbl.place(x=1, y=290)
+
+# post for scroll of images
+
+my_img = (Image.open("pic1.jpg"))
+my_img_1 = my_img.resize((548, 298), Image.ANTIALIAS)
+my_img_2 = ImageTk.PhotoImage(my_img_1)
+
+my_img1 = (Image.open("pic2.jpg"))
+my_img_3 = my_img1.resize((548, 298), Image.ANTIALIAS)
+my_img_4 = ImageTk.PhotoImage(my_img_3)
+
+my_img2 = (Image.open("pic3.jpg"))
+my_img_12 = my_img2.resize((548, 298), Image.ANTIALIAS)
+my_img_5 = ImageTk.PhotoImage(my_img_12)
+
+my_img3 = (Image.open("pic4.jpg"))
+my_img_6 = my_img3.resize((548, 298), Image.ANTIALIAS)
+my_img_7 = ImageTk.PhotoImage(my_img_6)
+
+my_img4 = (Image.open("pic5.jpg"))
+my_img_8 = my_img4.resize((548, 298), Image.ANTIALIAS)
+my_img_9 = ImageTk.PhotoImage(my_img_8)
+
+my_img5 = (Image.open("images (10).jpeg"))
+my_img_10 = my_img5.resize((548, 298), Image.ANTIALIAS)
+my_img_11 = ImageTk.PhotoImage(my_img_10)
+
+img_list = [my_img_2, my_img_4, my_img_5, my_img_7, my_img_9, my_img_11]
+
+img_lbl1 = Label(frame2, height=300, width=550, image=my_img_7, bg='white')
+img_lbl1.place(x=25, y=360)
+
+
+def forward(img_number):
+    global img_lbl1
+    global btn_nxt
+    global btn_bck
+
+    img_lbl1.grid_forget()
+    img_lbl1 = Label(frame2, height=300, width=550, image=img_list[img_number - 1], bg='white')
+    btn_nxt = Button(frame2, text=">", bd=0, bg='white', command=lambda: forward(img_number + 1))
+    btn_bck = Button(frame2, text="<", bd=0, bg='white', command=lambda: backward(img_number - 1))
+    if img_number == 5:
+        btn_nxt = Button(frame2, text=">", state=DISABLED, bd=0, bg='white')
+    img_lbl1.place(x=25, y=360)
+    btn_bck.place(x=530, y=330)
+    btn_nxt.place(x=550, y=330)
+
+
+def backward(img_number):
+    global img_lbl1
+    global btn_nxt
+    global btn_bck
+
+    img_lbl1.grid_forget()
+    img_lbl1 = Label(frame2, height=300, width=550, image=img_list[img_number - 1], bg='white')
+    btn_nxt = Button(frame2, text=">", bd=0, bg='white', command=lambda: forward(img_number + 1))
+    btn_bck = Button(frame2, text="<", bd=0, bg='white', command=lambda: backward(img_number - 1))
+    if img_number == 1:
+        btn_bck = Button(frame2, text="<", state=DISABLED, bd=0, bg='white')
+    img_lbl1.place(x=25, y=360)
+    btn_bck.place(x=530, y=330)
+    btn_nxt.place(x=550, y=330)
+
+
+btn_nxt = Button(frame2, text=">", bd=0, bg='white', command=lambda: forward(2))
+btn_bck = Button(frame2, text="<", bd=0, bg='white', command=backward)
+
+btn_nxt.place(x=550, y=330)
+btn_bck.place(x=530, y=330)
+
+x_icon = (Image.open("R.jpg"))
+x_icon1 = x_icon.resize((40, 40), Image.ANTIALIAS)
+x_icon2 = ImageTk.PhotoImage(x_icon1)
+
+x_lbl = Label(frame2, image=x_icon2, bd=0)
+x_lbl.place(x=40, y=315)
+
+x_name = Label(frame2, text="Xavier", bd=0, bg='white')
+x_name.config(font=("Arial", 12))
+x_name.place(x=90, y=320)
+
+x_place = Label(frame2, text="Pakistan", bd=0, bg='white', fg='#4A4A4A')
+x_place.config(font=("Arial", 10))
+x_place.place(x=90, y=338)
+
+st_1 = (Image.open("dp1.png"))
+st_2 = st_1.resize((70, 120), Image.ANTIALIAS)
+st = ImageTk.PhotoImage(st_2)
+
+st_lbl = Label(frame2, image=st, bd=0)
+st_lbl.place(x=120, y=135)
+
+st1_txt = Label(frame2, text="""Paisa double""", bd=0)
+st1_txt.place(x=120, y=260)
+
+st_3 = (Image.open("champak1.jpg"))
+st_4 = st_3.resize((70, 120), Image.ANTIALIAS)
+st1 = ImageTk.PhotoImage(st_4)
+
+st1_lbl = Label(frame2, image=st1, bd=0)
+st1_lbl.place(x=210, y=135)
+
+st2_txt = Label(frame2, text="Champak", bd=0)
+st2_txt.place(y=260, x=210)
+
+st_5 = (Image.open("dp3.jpg"))
+st_6 = st_5.resize((70, 120), Image.ANTIALIAS)
+st2 = ImageTk.PhotoImage(st_6)
+
+st2_lbl = Label(frame2, image=st2, bd=0)
+st2_lbl.place(x=300, y=135)
+
+st3_txt = Label(frame2, text="Namak", bd=0)
+st3_txt.place(x=300, y=260)
+
+st_7 = (Image.open("dp_e.jpg"))
+st_8 = st_7.resize((70, 120), Image.ANTIALIAS)
+st3 = ImageTk.PhotoImage(st_8)
+
+st3_lbl = Label(frame2, image=st3, bd=0)
+st3_lbl.place(x=390, y=135)
+
+st4_txt = Label(frame2, text="Mast", bd=0)
+st4_txt.place(x=390, y=260)
+
+st_9 = (Image.open("dpe.jpg"))
+st_10 = st_9.resize((70, 120), Image.ANTIALIAS)
+st4 = ImageTk.PhotoImage(st_10)
+
+st4_lbl = Label(frame2, image=st4, bd=0)
+st4_lbl.place(x=480, y=135)
+
+st5_txt = Label(frame2, text="Mind", bd=0)
+st5_txt.place(x=480, y=260)
+
+str11 = (Image.open("add_str.png"))
+str12 = str11.resize((70, 120), Image.ANTIALIAS)
+add_str = ImageTk.PhotoImage(str12)
+
+add_str_lbl = Label(frame2, image=add_str, bd=0)
+add_str_lbl.place(x=40, y=135)
+
+st6_txt = Label(frame2, text="Add story", bd=0)
+st6_txt.place(x=40, y=260)
+
+Post = Label(frame2, text="Posts", bd=0)
+Post.config(font=("Arial", 14))
+Post.place(x=30, y=285)
+
+filter_img = (Image.open("filter.png"))
+filter_img1 = filter_img.resize((22, 22), Image.ANTIALIAS)
+filter_img2 = ImageTk.PhotoImage(filter_img1)
+
+filter_img_lbl = Label(frame2, image=filter_img2, bd=0)
+filter_img_lbl.place(x=490, y=285)
+
+filter_txt = Label(frame2, text="Filters", bd=0)
+filter_txt.place(x=515, y=285)
+
+main_text = Label(frame2, text="Scrolling me wont get you money, start programming", bg='white')
+main_text.config(font=('Arial', 12))
+main_text.place(y=665, x=50)
+
+like = (Image.open("Facebook-like-button.jpg"))
+like1 = like.resize((80, 40), Image.ANTIALIAS)
+like2 = ImageTk.PhotoImage(like1)
+
+like_lbl = Label(frame2, bd=0, image=like2)
+like_lbl.place(x=50, y=690)
+
+comment = (Image.open("Facebook-comment-button - Copy -.jpg"))
+comment1 = comment.resize((100, 37), Image.ANTIALIAS)
+comment2 = ImageTk.PhotoImage(comment1)
+
+comment_lbl = Label(frame2, bd=0, image=comment2)
+comment_lbl.place(x=150, y=690)
+
+share = (Image.open("share_btn - Copy.jpg"))
+share1 = share.resize((80, 35), Image.ANTIALIAS)
+share2 = ImageTk.PhotoImage(share1)
+
+share_lbl = Label(frame2, bd=0, image=share2, bg='white')
+share_lbl.place(x=270, y=692)
+
+frame3 = LabelFrame(fb, height=750, bg='white', width=300, bd=0)
+frame3.place(x=950, y=25)
+
+usr_logo = (Image.open("download.png"))
+usr2 = usr_logo.resize((40, 35), Image.ANTIALIAS)
+usr3 = ImageTk.PhotoImage(usr2)
+
+usr_logo_lbl = Label(frame3, image=usr3, bd=0, bg="white")
+usr_logo_lbl.place(x=200, y=10)
+
+usr_name = Label(frame3, text="Batman", bd=0, bg='white')
+usr_name.config(font=("Franklin Gothic Medium", 12))
+usr_name.place(x=130, y=15)
+
+sep = (Image.open("line.png"))
+sep1 = sep.resize((280, 10), Image.ANTIALIAS)
+sep2 = ImageTk.PhotoImage(sep1)
+
+sep_lbl = Label(frame3, image=sep2, bd=0)
+sep_lbl.place(x=10, y=55)
+
+friends_lbl = Label(frame3, text="Friends", bg="White", bd=0)
+friends_lbl.config(font=("Arial", 14))
+friends_lbl.place(x=20, y=75)
+
+fr = (Image.open("Round Photo_Jul172022_073221.png"))
+fr1 = fr.resize((33, 33), Image.ANTIALIAS)
+fr2 = ImageTk.PhotoImage(fr1)
+
+fr1_lbl = Label(frame3, image=fr2, bd=0)
+fr1_lbl.place(x=25, y=110)
+
+fr_lbl1 = Label(frame3, text="Rickroll", bg="white", bd=0)
+fr_lbl1.config(font=("Arial", 12))
+fr_lbl1.place(x=65, y=115)
+
+crosss = (Image.open("grn_crs.png"))
+crosss1 = crosss.resize((12, 12), Image.ANTIALIAS)
+crosss2 = ImageTk.PhotoImage(crosss1)
+
+crosss_lbl = Label(frame3, image=crosss2, bd=0)
+crosss_lbl.place(x=240, y=115)
+
+fr3 = (Image.open("Round Photo_Jul172022_073512.png"))
+fr4 = fr3.resize((33, 33), Image.ANTIALIAS)
+fr5 = ImageTk.PhotoImage(fr4)
+
+fr2_lbl = Label(frame3, image=fr5, bd=0)
+fr2_lbl.place(x=25, y=160)
+
+fr_lbl2 = Label(frame3, text="Pareshan", bg="white", bd=0)
+fr_lbl2.config(font=("Arial", 12))
+fr_lbl2.place(x=65, y=165)
+
+crosss3 = (Image.open("grn_crs.png"))
+crosss4 = crosss3.resize((12, 12), Image.ANTIALIAS)
+crosss5 = ImageTk.PhotoImage(crosss4)
+
+crosss_lbl1 = Label(frame3, image=crosss5, bd=0)
+crosss_lbl1.place(x=240, y=160)
+
+fr6 = (Image.open("Round Photo_Jul172022_073259.png"))
+fr7 = fr6.resize((33, 33), Image.ANTIALIAS)
+fr8 = ImageTk.PhotoImage(fr7)
+
+fr3_lbl = Label(frame3, image=fr8, bd=0)
+fr3_lbl.place(x=25, y=210)
+
+fr_lbl3 = Label(frame3, text="Cj Bhaiya", bg="white", bd=0)
+fr_lbl3.config(font=("Arial", 12))
+fr_lbl3.place(x=65, y=215)
+
+crosss6 = (Image.open("grn_crs.png"))
+crosss7 = crosss6.resize((12, 12), Image.ANTIALIAS)
+crosss8 = ImageTk.PhotoImage(crosss7)
+
+crosss_lbl = Label(frame3, image=crosss8, bd=0)
+crosss_lbl.place(x=240, y=215)
+
+fr9 = (Image.open("Round Photo_Jul172022_073504.png"))
+fr10 = fr9.resize((33, 33), Image.ANTIALIAS)
+fr11 = ImageTk.PhotoImage(fr10)
+
+fr4_lbl = Label(frame3, image=fr11, bd=0)
+fr4_lbl.place(x=25, y=260)
+
+fr_lbl4 = Label(frame3, text="Khatam", bg="white", bd=0)
+fr_lbl4.config(font=("Arial", 12))
+fr_lbl4.place(x=65, y=265)
+
+crosss9 = (Image.open("grn_crs.png"))
+crosss10 = crosss9.resize((12, 12), Image.ANTIALIAS)
+crosss11 = ImageTk.PhotoImage(crosss10)
+
+crosss_lbl = Label(frame3, image=crosss11, bd=0)
+crosss_lbl.place(x=240, y=265)
+
+fr12 = (Image.open("Round Photo_Jul172022_073316.png"))
+fr13 = fr12.resize((33, 33), Image.ANTIALIAS)
+fr14 = ImageTk.PhotoImage(fr13)
+
+fr5_lbl = Label(frame3, image=fr14, bd=0)
+fr5_lbl.place(x=25, y=310)
+
+fr_lbl5 = Label(frame3, text="Are kya??", bg="white", bd=0)
+fr_lbl5.config(font=("Arial", 12))
+fr_lbl5.place(x=65, y=315)
+
+crosss12 = (Image.open("grn_crs.png"))
+crosss13 = crosss12.resize((12, 12), Image.ANTIALIAS)
+crosss14 = ImageTk.PhotoImage(crosss13)
+
+crosss_lbl = Label(frame3, image=crosss14, bd=0)
+crosss_lbl.place(x=240, y=315)
+
+fr15 = (Image.open("Round Photo_Jul172022_073330.png"))
+fr16 = fr15.resize((33, 33), Image.ANTIALIAS)
+fr17 = ImageTk.PhotoImage(fr16)
+
+fr6_lbl = Label(frame3, image=fr17, bd=0)
+fr6_lbl.place(x=25, y=360)
+
+fr_lbl6 = Label(frame3, text="Yeah john cena", bg="white", bd=0)
+fr_lbl6.config(font=("Arial", 12))
+fr_lbl6.place(x=65, y=365)
+
+crosss15 = (Image.open("grn_crs.png"))
+crosss16 = crosss15.resize((12, 12), Image.ANTIALIAS)
+crosss17 = ImageTk.PhotoImage(crosss16)
+
+crosss_lbl = Label(frame3, image=crosss17, bd=0)
+crosss_lbl.place(x=240, y=365)
+
+fr18 = (Image.open("Round Photo_Jul172022_073338.png"))
+fr19 = fr18.resize((33, 33), Image.ANTIALIAS)
+fr20 = ImageTk.PhotoImage(fr19)
+
+fr7_lbl = Label(frame3, image=fr20, bd=0)
+fr7_lbl.place(x=25, y=410)
+
+fr_lbl7 = Label(frame3, text="Gareebo ka tony", bg="white", bd=0)
+fr_lbl7.config(font=("Arial", 12))
+fr_lbl7.place(x=65, y=415)
+
+crosss18 = (Image.open("grn_crs.png"))
+crosss19 = crosss18.resize((12, 12), Image.ANTIALIAS)
+crosss20 = ImageTk.PhotoImage(crosss19)
+
+crosss_lbl = Label(frame3, image=crosss20, bd=0)
+crosss_lbl.place(x=240, y=415)
+
+fr21 = (Image.open("Round Photo_Jul172022_073350.png"))
+fr22 = fr21.resize((33, 33), Image.ANTIALIAS)
+fr23 = ImageTk.PhotoImage(fr22)
+
+fr8_lbl = Label(frame3, image=fr23, bd=0)
+fr8_lbl.place(x=25, y=460)
+
+fr_lbl8 = Label(frame3, text="Black guy", bg="white", bd=0)
+fr_lbl8.config(font=("Arial", 12))
+fr_lbl8.place(x=65, y=465)
+
+crosss21 = (Image.open("grn_crs.png"))
+crosss22 = crosss21.resize((12, 12), Image.ANTIALIAS)
+crosss23 = ImageTk.PhotoImage(crosss22)
+
+crosss_lbl = Label(frame3, image=crosss23, bd=0)
+crosss_lbl.place(x=240, y=465)
+
+fr24 = (Image.open("Round Photo_Jul172022_073404.png"))
+fr25 = fr24.resize((33, 33), Image.ANTIALIAS)
+fr26 = ImageTk.PhotoImage(fr25)
+
+fr9_lbl = Label(frame3, image=fr26, bd=0)
+fr9_lbl.place(x=25, y=510)
+
+fr_lbl9 = Label(frame3, text="hue hue dog", bg="white", bd=0)
+fr_lbl9.config(font=("Arial", 12))
+fr_lbl9.place(x=65, y=515)
+
+crosss24 = (Image.open("grn_crs.png"))
+crosss25 = crosss24.resize((12, 12), Image.ANTIALIAS)
+crosss26 = ImageTk.PhotoImage(crosss25)
+
+crosss_lbl = Label(frame3, image=crosss26, bd=0)
+crosss_lbl.place(x=240, y=515)
+
+fr27 = (Image.open("Round Photo_Jul172022_073416.png"))
+fr28 = fr27.resize((33, 33), Image.ANTIALIAS)
+fr29 = ImageTk.PhotoImage(fr28)
+
+fr10_lbl = Label(frame3, image=fr29, bd=0)
+fr10_lbl.place(x=25, y=560)
+
+fr_lbl10 = Label(frame3, text="Billi bhaiya", bg="white", bd=0)
+fr_lbl10.config(font=("Arial", 12))
+fr_lbl10.place(x=65, y=565)
+
+crosss27 = (Image.open("grn_crs.png"))
+crosss28 = crosss27.resize((12, 12), Image.ANTIALIAS)
+crosss29 = ImageTk.PhotoImage(crosss28)
+
+crosss_lbl = Label(frame3, image=crosss2, bd=0)
+crosss_lbl.place(x=240, y=565)
+
+fr30 = (Image.open("Round Photo_Jul172022_073426.png"))
+fr31 = fr30.resize((33, 33), Image.ANTIALIAS)
+fr32 = ImageTk.PhotoImage(fr31)
+
+fr11_lbl = Label(frame3, image=fr32, bd=0)
+fr11_lbl.place(x=25, y=610)
+
+fr_lbl11 = Label(frame3, text="Ameer banda", bg="white", bd=0)
+fr_lbl11.config(font=("Arial", 12))
+fr_lbl11.place(x=65, y=615)
+
+crosss30 = (Image.open("grn_crs.png"))
+crosss31 = crosss30.resize((12, 12), Image.ANTIALIAS)
+crosss32 = ImageTk.PhotoImage(crosss31)
+
+crosss_lbl = Label(frame3, image=crosss2, bd=0)
+crosss_lbl.place(x=240, y=615)
+
+fr33 = (Image.open("Round Photo_Jul172022_073448.png"))
+fr34 = fr33.resize((33, 33), Image.ANTIALIAS)
+fr35 = ImageTk.PhotoImage(fr34)
+
+fr12_lbl = Label(frame3, image=fr35, bd=0)
+fr12_lbl.place(x=25, y=660)
+
+fr_lbl12 = Label(frame3, text="Trolled guy", bg="white", bd=0)
+fr_lbl12.config(font=("Arial", 12))
+fr_lbl12.place(x=65, y=665)
+
+crosss36 = (Image.open("grn_crs.png"))
+crosss37 = crosss36.resize((12, 12), Image.ANTIALIAS)
+crosss38 = ImageTk.PhotoImage(crosss37)
+
+crosss_lbl = Label(frame3, image=crosss38, bd=0)
+crosss_lbl.place(x=240, y=665)
+
+nw_grp = (Image.open("nw_group.png"))
+nw_grp1 = nw_grp.resize((180, 40), Image.ANTIALIAS)
+nw_grp2 = ImageTk.PhotoImage(nw_grp1)
+
+nw_grp_lbl = Label(frame3, image=nw_grp2, bd=0)
+nw_grp_lbl.place(x=65, y=700)
+
+fb.mainloop()
