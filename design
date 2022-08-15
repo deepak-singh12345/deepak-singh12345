@@ -1,0 +1,10 @@
+import turtle
+col=['red','green','blue']
+t=turtle
+t.speed(10)
+for i in range(65):
+    t.color(col[i%3])
+    t.forward(200-i*3)
+    t.right(89)
+
+t.mainloop()
