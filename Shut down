@@ -1,0 +1,36 @@
+from tkinter import *
+import os
+
+def rst():
+	os.system("shutdown/r /t 1")
+def rst_ti():
+	os.system("shutdown /r /t /20")
+def lgout():
+	os.system("shutdown -1")
+def shut():
+	os.system("shutdown /s /t 1")
+
+
+
+st=Tk()
+st.title("Shutdown")
+st.geometry("500x500")
+st.config(bg="blue")
+
+bt1 = Button(st,text="Restart",font=("Time New Roman",20,"bold"),relief=RAISED,cursor="plus",command=rst)
+bt1.place(x=200,y=60,height=50,width=200)
+
+
+bt2 = Button(st,text="Restart Time",font=("Time New Roman",20,"bold"),relief=RAISED,cursor="plus",command=rst_ti)
+bt2.place(x=150,y=170,height=50,width=200)
+
+bt3 = Button(st,text="Log out",font=("Time New Roman",30,"bold"),relief=RAISED,cursor="plus",command=lgout)
+bt3.place(x=200,y=280,height=50,width=200)
+
+bt4 = Button(st,text="Shut down",font=("Time New Roman",30,"bold"),relief=RAISED,cursor="plus",command=shut)
+bt4.place(x=200,y=390,height=50,width=200)
+
+
+
+
+st.mainloop()
