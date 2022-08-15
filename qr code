@@ -1,0 +1,11 @@
+import qrcode
+from PIL import Image
+
+root = qrcode.QRCode(version=1,
+                     error_correction=qrcode.constants.ERROR_CORRECT_H,
+                     box_size=10,border=4)
+
+root.add_data("https://en.wikipedia.org/wiki/Delhi_Belly_(film)")
+root.make(fit=True)
+img = root.make_image(fill_color="red",back_color="green")
+img.save("MAt kholna.png")
