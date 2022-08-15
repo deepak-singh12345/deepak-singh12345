@@ -1,0 +1,31 @@
+import random
+
+def getanswer(answer_number):
+    if answer_number == 1:
+        return 'It is certain'
+    elif answer_number == 2:
+        return 'It is decidely so'
+    elif answer_number == 3:
+        return 'yes'
+    elif answer_number == 4:
+        return 'Reply hazy try again'
+    elif answer_number == 5:
+        return 'Ask again later'
+    elif answer_number == 6:
+        return 'Concentrate and ask again'
+    elif answer_number == 7:
+        return 'My reply is no'
+    elif answer_number == 8:
+        return 'Outlook not so good'
+    elif answer_number == 9:
+        return 'Very doubtful'
+while True:
+    r=input("Press y to enter and n to exit")
+    if r =='n':
+        break
+    elif r== 'y':
+        r=random.randint(1,9)
+        fortune=getanswer(r)
+        print(fortune)
+    else:
+        print('Invalid Input, only y or n')
