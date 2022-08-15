@@ -1,0 +1,34 @@
+from time import *
+import random as r
+
+
+def mstk(par, usr):
+    error = 0
+    for i in range(len(par)):
+        try:
+            if par[i] != usr[i]:
+                error = error + 1
+        except:
+            error = error + 1
+    return error
+
+
+def speed(st, en, us):
+    time_delay = en - st
+    time_r = round(time_delay, 2)
+    speed = len(tst_input) / time_r
+    return round(speed)
+
+
+tst = ["You cant be""a programmer just", "do what you like i", "will have no objections and go", "well in your life"]
+tst1 = r.choice(tst)
+print("Typing speed calculator ")
+print(tst1)
+print()
+print()
+time1 = time()
+tst_input = input("Enter :")
+time2 = time()
+
+print('Speed : ', speed(time1, time2, tst_input), 'wpso or w/sec')
+print("error : ", mstk(tst1, tst_input))
